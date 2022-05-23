@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Login</title>
+  <title>OpenUni</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/a.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -26,8 +26,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
-</head>
+ 
 
 <body>
 
@@ -64,7 +63,14 @@
       </nav><!-- .navbar -->
 
       <div class="header-social-links d-flex align-items-center">
-        
+        <a href="profile.html" class="instagram"><i class="bi bi-key" ></i></a>
+        <a href="account.html" class="profile"><i class="bi bi-person-circle" ></i></a>
+        <a href="" class="cart"><i class="bi bi-cart"></i></a>
+        <div class="searchBox">
+          <input type="text" class="searchText" placeholder="Search here">
+        <a href="#" class="searchBtn">
+          <i class="bi bi-search"></i></a>
+        </div>
       </div>
 
     </div>
@@ -84,27 +90,78 @@
 
 
 <!-- ======= Login Page ======= -->
-<div class="center_page">
-    <h1>Login</h1>
-    <form method="post">
-        <div class="txt_field">
-            <input type="text" required>
-            <span></span>
-            <label>Username</label>
-        </div>
-        <div class="txt_field">
-            <input type="password" required>
-            <span></span>
-            <label>Password</label>
-        </div>
-        <div class="pass">Forgot Password?</div>
-        <input type="submit" value="Login">
-        <div class="signup_link">
-            Not a member? <a href="signup.html">Signup</a>
-        </div>
-    </form>
-</div>
+<div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login</div>
+      <div class="title signup">Signup</div> 
+    </div>
+    
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slider" id="login" checked>
+        <input type="radio" name="slider" id="signup">
+      <label for="login" class="slide login">Login</label>
+      <label for="signup" class="slide signup">Signup</label>
+      <div class="slide-tab">
 
+      </div>
+
+    </div>
+      <div class="form-inner">
+        <form action="#" class= "login">
+          <div class="field">
+            <input type="text" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="pass-link"><a href="#">Forget password?</a></div>
+          <div class="field">
+            <input type="submit" placeholder="Password" value="Login">
+          </div>
+          <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+        </form>
+<!-- For Signup -->
+        <form action="#" class= "signup">
+          <div class="field">
+            <input type="text" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Confirm password" required>
+          </div>
+          
+          <div class="field">
+            <input type="submit" placeholder="Password" value="Signup">
+          </div>          
+        </form>
+      </div>
+    </div>  
+  </div>
+    <script>
+      const loginForm = document.querySelector("form.login");
+      const signupForm = document.querySelector("form.signup");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector(".signup-link a");
+      const loginText = document.querySelector(".title-text .login");
+      const signupText = document.querySelector(".title-text .signup");
+      
+      signupBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
+    </script>
 
 
   <!-- ======= Footer ======= -->
@@ -142,7 +199,7 @@
             <h4>Join Our Newsletter</h4>
             <p>For latest updates, stay tuned with us.</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email" placeholder="Enter your Email address"><input type="submit" value="Subscribe">
             </form>
           </div>
 
