@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>PG Program - OpenUni</title>
+  <title>OpenUni</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/a.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -27,7 +27,6 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
  
-</head>
 
 <body>
 
@@ -67,11 +66,7 @@
         <a href="profile.html" class="instagram"><i class="bi bi-key" ></i></a>
         <a href="account.html" class="profile"><i class="bi bi-person-circle" ></i></a>
         <a href="" class="cart"><i class="bi bi-cart"></i></a>
-        <div class="searchBox">
-          <input type="text" class="searchText" placeholder="Search here">
-        <a href="#" class="searchBtn">
-          <i class="bi bi-search"></i></a>
-        </div>
+        <a href="search.html" class="for_search"><i class="bi bi-search"></i></a>
       </div>
 
     </div>
@@ -80,98 +75,110 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container text-center text-md-left" data-aos="fade-up">
-      <h1>PG <span>Program</span></h1>
-      <h2></h2>
+      
+      
       
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
 <!-- ======= Portfolio Section ======= -->
-<section id="portfolio" class="portfolio">
-    <div class="container">
 
-      <div class="section-title">      
-        <h2>Courses</h2>
-        
-        <form action="">
+
+<!-- ======= Login Page ======= -->
+<div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Login</div>
+      <div class="title signup">Sign Up</div> 
+    </div>
+    
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slider" id="login" checked>
+        <input type="radio" name="slider" id="signup">
+      <label for="login" class="slide login">Login</label>
+      <label for="signup" class="slide signup">Sign Up</label>
+      <div class="slide-tab">
+
+      </div>
+
+    </div>
+      <div class="form-inner">
+        <form action="#" class= "login">
+          <div class="field">
+            <input type="text" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="pass-link"><a href="#">Forget password?</a></div>
+          <div class="field">
+            <input type="submit" placeholder="Password" value="Login">
+          </div>
           
-          <input type="text" name="" id="course_name" placeholder="Course">
-          <input type="number" name="" id="course_name" placeholder="Current Year">
-          <button class="btn1">Fetch</button>
+          <div class="signup-link">Not a member? <a href="#">Create account</a></div>
+          <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <div class="signup-link">Login with</div>
+            <a href="#" class="twitter"><i class="bx bxl-google"></i></a>
+            <a href="#" class="twitter"><i class="bx bxl-facebook"></i></a>
+           
+          </div>
         </form>
-        
-      </div>
-      
-
-      <div class="row">
-        <div class="col-lg-12">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Bachelor's courses</li>
-            <li data-filter=".filter-card">Master's courses</li>
-            <li data-filter=".filter-web">Certificate</li>
-          </ul>
-        </div>
-      </div>
-
-    
-
-    
-
-    
-
-   
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Any queries??</h2>
-          <p>Feel free to drop a message to our experts.</p>
-        </div>
-
-        <div class="row mt-5 justify-content-center">
-
+<!-- For Signup -->
+        <form action="#" class= "signup">
+          <div class="field">
+            <input type="text" placeholder="Email Address" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Confirm password" required>
+          </div>
           
-
+          <div class="field">
+            <input type="submit"  value="Create account">
           </div>
+          <div class="field">
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+              <div class="signup-link">Create account with</div>
+              <a href="#" class="twitter"><i class="bx bxl-google"></i></a>
+              <a href="#" class="twitter"><i class="bx bxl-facebook"></i></a>
+             
+            </div>
 
-        </div>
 
-        <div class="row mt-5 justify-content-center">
-          <div class="col-lg-10">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            
           </div>
-
-        </div>
-
+          
+          
+        </form>
       </div>
-    </section><!-- End Contact Section -->
+    </div>  
+  </div>
+    <script>
+      const loginForm = document.querySelector("form.login");
+      const signupForm = document.querySelector("form.signup");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector(".signup-link a");
+      const loginText = document.querySelector(".title-text .login");
+      const signupText = document.querySelector(".title-text .signup");
+      
+      signupBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
+    </script>
 
-  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -225,7 +232,7 @@
        
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <div class="social-links text-center  text-md-right pt- pt-md-0">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
