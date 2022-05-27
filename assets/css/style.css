@@ -84,11 +84,11 @@ h1, h2, h3, h4, h5, h6 {
 # Header Social Links
 --------------------------------------------------------------*/
 .header-social-links {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 10px;
 }
 .header-social-links a {
   color: #9ba6af;
-  padding-left: 8px;
+  padding-left:8px;
   display: inline-block;
   line-height: 0px;
   transition: 0.3s;
@@ -104,6 +104,32 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 15px 0 0;
   }
 }
+/*--------------------------------------------------------------
+# For search bar 
+--------------------------------------------------------------*/
+.container .box{
+  
+  height: 50px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.container .box >i{
+  font-size: 20px;
+  color: #777; 
+}
+.container .box >input{
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -197,6 +223,14 @@ h1, h2, h3, h4, h5, h6 {
     left: -100%;
   }
 }
+
+.navbar .current1 {
+  color: #3498db;
+}
+
+
+
+
 
 /**
 * Mobile Navigation 
@@ -532,48 +566,7 @@ section {
   background-color: #5faee3;
 }
 
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts {
-  background: white;
-  padding: 30px 0 40px 0;
-}
-.counts .count-box {
-  padding: 30px 30px 25px 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background: #fff;
-}
-.counts .count-box i {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 20px;
-  background: #3498db;
-  padding: 12px;
-  color: #fff;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-}
-.counts .count-box span {
-  font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #124364;
-}
-.counts .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-}
+
 
 /*--------------------------------------------------------------
 # Services
@@ -863,48 +856,7 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team .member {
-  text-align: center;
-  margin-bottom: 20px;
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-  padding: 30px 20px;
-  background: #fff;
-}
-.team .member img {
-  max-width: 60%;
-  border-radius: 50%;
-  margin: 0 0 30px 0;
-}
-.team .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-}
-.team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-.team .member p {
-  padding-top: 10px;
-  font-size: 14px;
-  font-style: italic;
-  color: #aaaaaa;
-}
-.team .member .social {
-  margin-top: 15px;
-}
-.team .member .social a {
-  color: #919191;
-  transition: 0.3s;
-}
-.team .member .social a:hover {
-  color: #3498db;
-}
-.team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
-}
+
 
 /*--------------------------------------------------------------
 # Contact
@@ -1378,38 +1330,8 @@ form .field input[type="submit"]{
 a,a:hover{
   text-decoration: none;
 }
-.searchBox{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
 
-}
-.searchText{
-  width: 20rem;
-  padding: 1rem;
-  border-radius: 5rem;
-  border: none;
-  outline: none;
-  transition: all 0.2s linear;
-}
 
-.searchText:focus{
-  outline: none;
-}
-.searchBtn{
-  width: 5rem;
-  
- 
-  color: #fff;
-  position: absolute;
-  right: 1rem;
-  display: grid;
-  place-items: center;
-  
-  
-}
 .user_profile:hover{
   color: #fff;
 }
