@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #FFF;
+}
+.cookies_box{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    max-width: 365px;
+    background: #fff;
+    padding: 25px 25px 30px 25px;
+    border-radius: 15px;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.15);
+    text-align: center;
+}
+.cookies_box.hide{
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+::selection{
+    color: #fff;
+    background: #3498db;
+}
+.cookies_box img{
+    max-width: 90px;
+}
+.content header{
+    font-size: 25px;
+    font-weight: 600;
+}
+.content{
+    margin-top: 10px;
+}
+.content p{
+    color: #858585;
+    margin: 5px 0 20px 0;
+  }
+.content .cookies_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookies_buttons button{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    background: #3498db;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.cookies_buttons button:hover{
+    transform: scale(0.97);
+}
+
+.cookies_buttons .item{
+    margin: 0 10px;
+}
+
+.cookies_buttons a{
+    color: #3498db;
+  }
