@@ -38,4 +38,4 @@ urlpatterns = [
     path('search', search, name='search'),
     path('worpro', worpro, name='worpro'),
     
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

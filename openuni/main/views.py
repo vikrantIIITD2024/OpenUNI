@@ -1,8 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from main.models import *
 
 
 def index(request):
+    
+    course=request.GET.get('course')
+    year=request.GET.get('year')
+    category=request.GET.get('category')
+    
+    
+    
+    
     return render(request, 'index.html',{})
 
 
