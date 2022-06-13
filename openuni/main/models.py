@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib import admin
+from django.contrib.auth.models import User
 
 # Create your models here.
 COURSE_CATEGORY=[
@@ -16,37 +17,37 @@ FILE_TYPE=[
     ("WORKBOOK","WORKBOOK"),
     ("EVENTS","EVENTS")
 ]
-from django.contrib.auth.models import User
 
 class ExtendedUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    First_name = models.CharField(max_length=100)
-    Last_name= models.CharField(max_length=100)
-    Gender = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
-    Phone_number = models.CharField(max_length=100)
+    First_name = models.CharField(max_length=100,blank=True)
+    Last_name= models.CharField(max_length=100,blank=True)
+    Gender = models.CharField(max_length=100,blank=True)
+    email = models.CharField(max_length=100,blank=True)
+    Phone_number = models.CharField(max_length=100,blank=True)
     year=models.IntegerField(blank=True)
-    
-    # Enrollment Number-
-    # Regional Centre Code-
-    # Regional Centre Name-
-    # Study Centre Code-
-    # Study Centre Name-
-    # Session- Eg. July 2020
-    # temporary block
-    # permanent block
-    # timout
+    Enrollment_Number = models.CharField(max_length=100,blank=True)
+    Regional_Centre_Code = models.CharField(max_length=100,blank=True)
+    Regional_Centre_Name = models.CharField(max_length=100,blank=True)
+    Study_Centre_Code = models.CharField(max_length=100,blank=True)
+    Study_Centre_Name = models.CharField(max_length=100,blank=True)
+    Session = models.CharField(max_length=100,blank=True)
+    temporary_block = models.BooleanField(default=False)
+    permanent_block = models.BooleanField(default=False)
+    timout = models.DateTimeField(blank=True)
     
 class Objects(models.Model):
     coursename = models.CharField(max_length=30,blank=True)
-    file_field = models.FileField(upload_to='media/documents/',blank=True)
+    free_user_file = models.FileField(upload_to='media/documents/free/',blank=True)
+    paid_user_file = models.FileField(upload_to='media/documents/paid/',blank=True)
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
     course_category=models.CharField(max_length=9,choices=COURSE_CATEGORY,blank=True)
     year=models.IntegerField(blank=True)
     file_type=models.CharField(max_length=15,choices=FILE_TYPE,blank=True)
     
-    #2 different pdf for free and paid user
-    # paid user pdf view only on mobile app
+class Events(models.Model):
+    event_name = models.CharField(max_length=30,blank=True)
+    event_date = models.DateTimeField(blank=True)
     
 class ObjectsAdmin(admin.ModelAdmin):
     list_display = ('coursename', 'course_category', 'file_type','year')
@@ -67,7 +68,14 @@ class Payment(models.Model):
 class PaymentAdmin(admin.ModelAdmin):
     pass
 class ExtendedUserAdmin(admin.ModelAdmin):
+    list_display=('email','Phone_number','year','First_name')
+    search_fields = ('email', 'Phone_number','Enrollment_Number')
+    
+class EventsAdmin(admin.ModelAdmin):
     pass
+
+
 admin.site.register(Objects, ObjectsAdmin)
 admin.site.register(Payment, PaymentAdmin)
 admin.site.register(ExtendedUser, ExtendedUserAdmin)
+admin.site.register(Events, EventsAdmin)
