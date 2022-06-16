@@ -49,6 +49,11 @@ class Events(models.Model):
     event_name = models.CharField(max_length=30,blank=True)
     event_date = models.DateTimeField(blank=True)
     
+    
+class FAQ(models.Model):
+    question = models.CharField(max_length=200,blank=True)
+    answer = models.CharField(max_length=1000,blank=True)
+    
 class ObjectsAdmin(admin.ModelAdmin):
     list_display = ('coursename', 'course_category', 'file_type','year')
     
@@ -72,6 +77,10 @@ class ExtendedUserAdmin(admin.ModelAdmin):
     search_fields = ('email', 'Phone_number','Enrollment_Number')
     
 class EventsAdmin(admin.ModelAdmin):
+    list_display = ('event_name', 'event_date')
+    pass
+
+class FAQAdmin(admin.ModelAdmin):
     pass
 
 
@@ -79,3 +88,4 @@ admin.site.register(Objects, ObjectsAdmin)
 admin.site.register(Payment, PaymentAdmin)
 admin.site.register(ExtendedUser, ExtendedUserAdmin)
 admin.site.register(Events, EventsAdmin)
+admin.site.register(FAQ, FAQAdmin)
