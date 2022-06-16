@@ -25,7 +25,7 @@ SECRET_KEY = 'p=y9@&8#4d=+xk$*#feyvoy4^f*3z)(%$e38@xyete3$$v*@*j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,17 @@ STATICFILES_DIRS = (
 
 MEDIA_ROOT  = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+import django_heroku
+django_heroku.settings(locals())
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
+cloudinary.config( 
+  cloud_name = "openuni", 
+  api_key = "967578316464916", 
+  api_secret = "HUqOQThom--o93sWr2yDhEzkE9A" 
+)

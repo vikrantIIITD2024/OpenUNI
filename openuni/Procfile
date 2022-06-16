@@ -1,0 +1,2 @@
+web: gunicorn openuni.wsgi
+release: python manage.py migrate

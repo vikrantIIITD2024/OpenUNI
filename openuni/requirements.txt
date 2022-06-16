@@ -1,0 +1,7 @@
+django==2.2.4
+django-cors-headers
+django-heroku
+Pillow
+django-tinymce4-lite
+cloudinary
+gunicorn==20.0.4
