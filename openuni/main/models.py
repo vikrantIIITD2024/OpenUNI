@@ -39,10 +39,10 @@ class ExtendedUser(models.Model):
     
 class Objects(models.Model):
     coursename = models.CharField(max_length=30,blank=True)
-    # free_user_file = models.FileField(upload_to='media/documents/free/',blank=True)
-    # paid_user_file = models.FileField(upload_to='media/documents/paid/',blank=True)
-    paid_user_file = CloudinaryField(resource_type="auto", null=True, blank=True)
-    free_user_file = CloudinaryField(resource_type="auto", null=True, blank=True)
+    free_user_file = models.FileField(upload_to='media/documents/free/',blank=True)
+    paid_user_file = models.FileField(upload_to='media/documents/paid/',blank=True)
+    # paid_user_file = CloudinaryField(resource_type="auto", null=True, blank=True)
+    # free_user_file = CloudinaryField(resource_type="auto", null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
     course_category=models.CharField(max_length=9,choices=COURSE_CATEGORY,blank=True)
     year=models.IntegerField(blank=True)
