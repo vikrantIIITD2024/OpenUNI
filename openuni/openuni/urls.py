@@ -37,5 +37,8 @@ urlpatterns = [
     path('questionpaper', questionpaper, name='questionpaper'),
     path('search', search, name='search'),
     path('worpro', worpro, name='worpro'),
+    path('faqs', faqs, name='faqs'),
+    path('tnc', tnc, name='tnc'),
+    path('privacy-policy', privacypolicy, name='privacy-policy'),
     
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
