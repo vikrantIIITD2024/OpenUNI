@@ -139,7 +139,13 @@ import cloudinary.api
 
 
 cloudinary.config( 
-  cloud_name = "openuni", 
-  api_key = "967578316464916", 
-  api_secret = "HUqOQThom--o93sWr2yDhEzkE9A" 
+  cloud_name = "dffpqjmmm", 
+  api_key = "263647317619745", 
+  api_secret = "xDAEkJ-quOYfRfqcNPn00_1ndn4" 
 )
+
+CLOUDINARY_URL='cloudinary://263647317619745:xDAEkJ-quOYfRfqcNPn00_1ndn4@dffpqjmmm'
+
+
+LOGOUT_REDIRECT_URL = "index"
+LOGIN_REDIRECT_URL = "account"

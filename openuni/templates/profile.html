@@ -3,276 +3,286 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>OpenUni</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>OpenUni</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="{% static 'assets/img/a.jpg' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/a.jpg' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link src="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link src="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Template Main CSS File -->
-  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
-
- 
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo me-auto">
-        <h1><a href="/">OpenUni</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="assignments">Solved Assignments</a></li>
-          <li><a class="nav-link scrollto" href="questionpaper">Question Papers</a></li>
-          
-          <li><a class="nav-link scrollto" href="worpro">Workbooks</a></li>
-          <li><a class="nav-link scrollto" href="events">Events</a></li>
-          <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="degree">Degree Program</a></li>
-              
-              <li><a href="pgprogram">PG Program</a></li>
-              <li><a href="diploma">Diploma</a></li>
-              <li><a href="certificate ">Certificate</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="header-social-links d-flex align-items-center">
-        
-        <a href="account" class="profile"><i class="bi bi-person-circle" ></i></a>
-        <a href="" class="cart"><i class="bi bi-cart"></i></a>
-        <a href="search" class="for_search"><i class="bi bi-search"></i></a>
-      </div>
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="container text-center text-md-left" data-aos="fade-up">
-      
-      
-      
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-<!-- ======= Portfolio Section ======= -->
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
 
-<!-- ======= Login Page ======= -->
-<div class="wrapper">
-    <div class="title-text">
-      <div class="title login">Login</div>
-      <div class="title signup">Sign Up</div> 
-    </div>
-    
-    <div class="form-container">
-      <div class="slide-controls">
-        <input type="radio" name="slider" id="login" checked>
-        <input type="radio" name="slider" id="signup">
-      <label for="login" class="slide login">Login</label>
-      <label for="signup" class="slide signup">Sign Up</label>
-      <div class="slide-tab">
 
-      </div>
+    <body>
 
-    </div>
-      <div class="form-inner">
-        <form action="account" class= "login">
-          <div class="field">
-            <input type="text" placeholder="Email Address" required>
-          </div>
-          <div class="field">
-            <input type="password" placeholder="Password" required>
-          </div>
-          <div class="pass-link"><a href="#">Forget password?</a></div>
-          <div class="field"><a href="account">
-            <input type="submit" placeholder="Password" value="Login"></a>
-          </div>
-          
-          <div class="signup-link">Not a member? <a href="#">Create account</a></div>
-          <div class="social-links text-center text-md-right pt-3 pt-md-0">
-            <div class="signup-link">Login with</div>
-            <a href="#" class="twitter"><i class="bx bxl-google"></i></a>
-            <a href="#" class="twitter"><i class="bx bxl-facebook"></i></a>
-           
-          </div>
-        </form>
-<!-- For Signup -->
-        <form action="#" class= "signup">
-          <div class="field">
-            <input type="text" placeholder="Email Address" required>
-          </div>
-          <div class="field">
-            <input type="password" placeholder="Password" required>
-          </div>
-          <div class="field">
-            <input type="password" placeholder="Confirm password" required>
-          </div>
-          
-          <div class="field">
-            <input type="submit"  value="Create account">
-          </div>
-          <div class="field">
-            <div class="social-links text-center text-md-right pt-3 pt-md-0">
-              <div class="signup-link">Create account with</div>
-              <a href="#" class="twitter"><i class="bx bxl-google"></i></a>
-              <a href="#" class="twitter"><i class="bx bxl-facebook"></i></a>
-             
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top d-flex align-items-center">
+            <div class="container d-flex align-items-center">
+
+                <div class="logo me-auto">
+                    <h1><a href="/">OpenUni</a></h1>
+                    <!-- Uncomment below if you prefer to use an image logo -->
+                    <!-- <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                </div>
+
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                        <li><a class="nav-link scrollto" href="assignments">Solved Assignments</a></li>
+                        <li><a class="nav-link scrollto" href="questionpaper">Question Papers</a></li>
+
+                        <li><a class="nav-link scrollto" href="worpro">Workbooks</a></li>
+                        <li><a class="nav-link scrollto" href="events">Events</a></li>
+                        <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a href="degree">Degree Program</a></li>
+
+                                <li><a href="pgprogram">PG Program</a></li>
+                                <li><a href="diploma">Diploma</a></li>
+                                <li><a href="certificate ">Certificate</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <!-- .navbar -->
+
+                <div class="header-social-links d-flex align-items-center">
+
+                    <a href="account" class="profile"><i class="bi bi-person-circle" ></i></a>
+                    <a href="" class="cart"><i class="bi bi-cart"></i></a>
+                    <a href="search" class="for_search"><i class="bi bi-search"></i></a>
+                </div>
+
             </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="container text-center text-md-left" data-aos="fade-up">
 
 
-            
-          </div>
-          
-          
-        </form>
-      </div>
-    </div>  
-  </div>
+
+            </div>
+        </section>
+        <!-- End Hero -->
+
+        <main id="main">
+            <!-- ======= Portfolio Section ======= -->
+
+
+            <!-- ======= Login Page ======= -->
+            <div class="wrapper">
+                <div class="title-text">
+                    <div class="title login">Login</div>
+                    <div class="title signup">Sign Up</div>
+                </div>
+
+                <div class="form-container">
+                    <div class="slide-controls">
+                        <input type="radio" name="slider" id="login" checked>
+                        <input type="radio" name="slider" id="signup">
+                        <label for="login" class="slide login">Login</label>
+                        <label for="signup" class="slide signup">Sign Up</label>
+                        <div class="slide-tab">
+
+                        </div>
+
+                    </div>
+                    <div class="form-inner">
+                        <form action="/login" class="login" method="post">
+                            {% csrf_token %}
+                            <div class="field">
+                                <input type="text" placeholder="Email Address" name="email" required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Password" name="password" required>
+                            </div>
+                            <div class="pass-link"><a href="#">Forget password?</a></div>
+                            <div class="field">
+                                <a href="account">
+                                    <input type="submit" placeholder="Password" value="Login"></a>
+                            </div>
+
+                            <div class="signup-link">Not a member? <a href="#">Create account</a></div>
+                            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                                <div class="signup-link">Login with</div>
+                                <a href="#" class="twitter"><i class="bx bxl-google"></i></a>
+                                <a href="#" class="twitter"><i class="bx bxl-facebook"></i></a>
+
+                            </div>
+                        </form>
+                        <!-- For Signup -->
+                        <form action="/signup" class="signup" method="post">
+                            {% csrf_token %}
+                            <div class="field">
+                                <input type="text" placeholder="Email Address" name="email" required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Password" name="password" required>
+                            </div>
+                            <div class="field">
+                                <input type="password" placeholder="Confirm password" name="confirmpassword" required>
+                            </div>
+                            <div class="field">
+                                <input type="submit" value="Create account">
+                            </div>
+                            <div class="field">
+                                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                                    <div class="signup-link">Create account with</div>
+                                    <a href="#" class="twitter"><i class="bx bxl-google"></i></a>
+                                    <a href="#" class="twitter"><i class="bx bxl-facebook"></i></a>
+
+                                </div>
+
+
+
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const loginForm = document.querySelector("form.login");
+                const signupForm = document.querySelector("form.signup");
+                const loginBtn = document.querySelector("label.login");
+                const signupBtn = document.querySelector("label.signup");
+                const signupLink = document.querySelector(".signup-link a");
+                const loginText = document.querySelector(".title-text .login");
+                const signupText = document.querySelector(".title-text .signup");
+
+                signupBtn.onclick = (() => {
+                    loginForm.style.marginLeft = "-50%";
+                    loginText.style.marginLeft = "-50%";
+                });
+                loginBtn.onclick = (() => {
+                    loginForm.style.marginLeft = "0%";
+                    loginText.style.marginLeft = "0%";
+                });
+                signupLink.onclick = (() => {
+                    signupBtn.click();
+                    return false;
+                });
+            </script>
+
+
+            <!-- ======= Footer ======= -->
+            <footer id="footer">
+
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-3 col-md-6 footer-contact">
+                                <h3>OpenUni</h3>
+                                <p>
+                                    <strong>Phone:</strong> 1234567890<br>
+                                    <strong>Email:</strong> openuni@xyz.com<br>
+                                </p>
+                            </div>
+
+
+
+                            <div class="col-lg-3 col-md-6 footer-links">
+                                <h4>Our Services</h4>
+                                <ul>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="assignments">Solved Assignments</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="questionpaper">Question Papers</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="examnotes">Exam Notes</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="worpro">Workbooks</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="events">Events</a></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="col-lg-2 col-md-6 footer-links">
+                                <h4>Useful Links</h4>
+                                <ul>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="faqs">FAQs</a></li>
+
+
+                                    <li><i class="bx bx-chevron-right"></i> <a href="tnc">Terms and Conditions</a></li>
+                                    <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy">Privacy policy</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 footer-newsletter">
+                                <h4>Join Our Newsletter</h4>
+                                <p>For latest updates, stay tuned with us.</p>
+                                <form action="" method="post">
+                                    <input type="email" name="email" placeholder="Enter your Email address"><input type="submit" value="Subscribe">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container d-md-flex py-4">
+
+                    <div class="me-md-auto text-center text-md-start">
+                        <div class="copyright">
+                            &copy; Copyright <strong><span>OpenUni</span></strong>. All Rights Reserved
+                        </div>
+
+                    </div>
+                </div>
+                <div class="social-links text-center  text-md-right pt- pt-md-0">
+                    <a href="https://mobile.twitter.com/OpenUni11" class="twitter"><i class="bx bxl-twitter"></i></a>
+
+                    <a href="https://www.instagram.com/openuni.in/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
+
+
+                    <a href="https://t.me/+VvMMR2I2MjI3NTBl" class="gmail"><i class="bx bxl-telegram"></i></a>
+
+                    <a href="https://chat.whatsapp.com/CFWuSZQ2w3i6DGiRyVZTU4" class="wahtsapp"><i class="bx bxl-whatsapp"></i></a>
+
+                </div>
+                </div>
+            </footer>
+            <!-- End Footer -->
+
+            <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+            <!-- Vendor JS Files -->
+            <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+            <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+            <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+            <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+            <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+            <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+            <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+            <!-- Main JS File -->
+            <script src="{% static 'assets/js/main.js' %}"></script>
+
+    </body>
+
     <script>
-      const loginForm = document.querySelector("form.login");
-      const signupForm = document.querySelector("form.signup");
-      const loginBtn = document.querySelector("label.login");
-      const signupBtn = document.querySelector("label.signup");
-      const signupLink = document.querySelector(".signup-link a");
-      const loginText = document.querySelector(".title-text .login");
-      const signupText = document.querySelector(".title-text .signup");
-      
-      signupBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "-50%";
-        loginText.style.marginLeft = "-50%";
-      });
-      loginBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "0%";
-        loginText.style.marginLeft = "0%";
-      });
-      signupLink.onclick = (()=>{
-        signupBtn.click();
-        return false;
-      });
+        var alr = "{{alert}}";
+        if (alr) {
+            alert(alr);
+        }
     </script>
-
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>OpenUni</h3>
-            <p>
-              XYZ <br>
-              New Delhi, 1100XX<br>
-              India <br><br>
-              <strong>Phone:</strong> 1234567890<br>
-              <strong>Email:</strong> openuni@xyz.com<br>
-            </p>
-          </div>
-
-          
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="assignments">Solved Assignments</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="questionpaper">Question Papers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="examnotes">Exam Notes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="worpro">Workbooks</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="events">Events</a></li>
-            </ul>
-          </div>
-
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="faqs">FAQs</a></li>
-              
-              
-              <li><i class="bx bx-chevron-right"></i> <a href="tnc">Terms and Conditions</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>For latest updates, stay tuned with us.</p>
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Enter your Email address"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>OpenUni</span></strong>. All Rights Reserved
-        </div>
-       
-        </div>
-      </div>
-      <div class="social-links text-center  text-md-right pt- pt-md-0">
-        <a href="https://mobile.twitter.com/OpenUni11" class="twitter"><i class="bx bxl-twitter"></i></a>
-        
-        <a href="https://www.instagram.com/openuni.in/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
-        
-        
-        <a href="https://t.me/+VvMMR2I2MjI3NTBl" class="gmail"><i class="bx bxl-telegram"></i></a>
-        
-        <a href="https://chat.whatsapp.com/CFWuSZQ2w3i6DGiRyVZTU4" class="wahtsapp"><i class="bx bxl-whatsapp"></i></a>
-      
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-
-  <!-- Main JS File -->
-  <script src="{% static 'assets/js/main.js' %}"></script>
-
-</body>
 
 </html>

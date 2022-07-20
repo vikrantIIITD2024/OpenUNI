@@ -3,433 +3,515 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>OpenUni</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>OpenUni</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="{% static 'assets/img/a.jpg' %}" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/a.jpg' %}" rel="icon">
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link src="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link src="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Template Main CSS File -->
-  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
- 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 </head>
 
+<style>
+    .mySlides {
+        display: none
+    }
+    /* Slideshow container */
+    
+    .slideshow-container {
+        width: 100%;
+        position: relative;
+        margin: auto;
+    }
+    /* Next & previous buttons */
+    
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+    /* Position the "next button" to the right */
+    
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    /* Caption text */
+    
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    /* Number text (1/3 etc) */
+    
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    /* The dots/bullets/indicators */
+    
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    /* @keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+} */
+    /* On smaller screens, decrease text size */
+    
+    @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
+</style>
+
 <body>
-  
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
 
-      <div class="logo me-auto">
-        <h1><a href="/">OpenUni</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+
+            <div class="logo me-auto">
+                <h1><a href="/">OpenUni</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="current1  " href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/courses?type=ASSIGNMENT">Solved Assignments</a></li>
+                    <li><a class="nav-link scrollto" href="/courses?type=QUESTION_PAPER">Question Papers</a></li>
+
+                    <li><a class="nav-link scrollto" href="/courses?type=WORKBOOK">Workbooks</a></li>
+                    <li><a class="nav-link scrollto" href="events">Events</a></li>
+                    <li class="dropdown nav-link scrollto"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="/courses?course_category=DEGREE">Degree Program</a></li>
+
+                            <li><a href="/courses?course_category=PG">PG Program</a></li>
+                            <li><a href="/courses?course_category=DIPLOMA">Diploma</a></li>
+                            <li><a href="/courses?course_category=CERTIFICATE">Certificate</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="contacts">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle" style="color:#3498db !important"></i>
+            </nav>
+            <!-- .navbar -->
+
+            <div class="header-social-links d-flex align-items-center">
+
+
+                <a href="profile" class="user_profile"><i class="bi bi-person-circle" ></i></a>
+                <a href="" class="cart"><i class="bi bi-cart"></i></a>
+                <a href="search" class="for_search"><i class="bi bi-search"></i></a>
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </header>
+    <!-- End Header -->
+    <div id="carouselExampleIndicators" class="carousel slide mt-5 pt-3 d-none" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {%for img in images%}
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{loop.index}}"></li>
+            {%endfor%}
+            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+        </ol>
+        <div class="carousel-inner">
+
+            {%for img in images%}
+            <a href="{{img.redirect_link}}">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="{{img.img_link}}" alt="">
+                </div>
+            </a>
+            {%endfor%}
+            <!-- <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'assets/img/about.jpg' %}" alt="First slide">
       </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="current1" href="/">Home</a></li>
-          <li><a class="nav-link scrollto" href="assignments">Solved Assignments</a></li>
-          <li><a class="nav-link scrollto" href="questionpaper">Question Papers</a></li>
-          
-          <li><a class="nav-link scrollto" href="worpro">Workbooks</a></li>
-          <li><a class="nav-link scrollto" href="events">Events</a></li>
-          <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="degree">Degree Program</a></li>
-              
-              <li><a href="pgprogram">PG Program</a></li>
-              <li><a href="diploma">Diploma</a></li>
-              <li><a href="certificate">Certificate</a></li>
-            </ul>
-          </li>
-          <li><a class="" href="contacts">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="header-social-links d-flex align-items-center">
-        
-        
-        <a href="profile" class="user_profile"><i class="bi bi-person-circle" ></i></a>
-        <a href="" class="cart"><i class="bi bi-cart"></i></a>
-        <a href="search" class="for_search"><i class="bi bi-search"></i></a>
-          
-          
-          
-        
-          
-      
-          
-        
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="{% static 'assets/img/about.jpg' %}" alt="Second slide">
       </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="{% static 'assets/img/about.jpg' %}" alt="Third slide">
+      </div> -->
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="slideshow-container mt-5 pt-3">
+
+        {%for img in images%}
+        <a target="_blank" href="{{img.redirect_link}}">
+            <div class="mySlides">
+                <div class="numbertext">{{loop.index}}</div>
+                <img src="{{img.img_link}}" style="width:100%">
+            </div>
+        </a>
+        {%endfor%}
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
 
     </div>
-  </header><!-- End Header -->
+    <!-- <br> -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div style="text-align:center">
+        {%for img in images%}
+        <span class="dot" onclick="currentSlide(loop.index)"></span> {%endfor%}
+    </div>
+    <!-- ======= Hero Section ======= -->
+    <!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container text-center text-md-left" data-aos="fade-up">
       <h1>Welcome to <span>OpenUni</span></h1>
       <h2>A degree that's worth it!</h2>
       <a href="#about" class="btn-get-started scrollto">Download App</a>
     </div>
-  </section><!-- End Hero -->
+  </section> -->
+    <!-- End Hero -->
 
-  <main id="main">
-<!--  ======= What We Do Section ======= -->
-    <section id="what-we-do" class="what-we-do">
-      <div class="container">
+    <main id="main">
+        <!--  ======= What We Do Section ======= -->
+        <section id="what-we-do" class="what-we-do">
+            <div class="container">
 
-        <div class="section-title">
-          <h2>What We Do</h2>
-          <p>"Our team works rigorously to provide you with the best quality content. We care about the aspirations of our students and would guide you on your journey.
-            "</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="assignments">Assignment</a></h4>
-              <p>Who measures intelligence with assignments? Our education system is still stuck with this rudimentary parameter. Therefore we provide you assignment so that you can focus on learning new things with us.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="worpro">Workbook/project</a></h4>
-              <p>Got no idea on how to begin your research projects? What are we here for, at OpenUni you'd find all the guidance you seek. All you need is to be enthusiastic and cooperative with our team.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="exams">Exam</a></h4>
-              <p>Last minute exam preparation isn't an easy task and we understand that. We provide you with Previous Year Question Paper analysis based on their marks weightage and frequency. However time you have to spare, it should be with OpenUni.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>About Us</h3>
-            <p>
-              OpenUni is a youth startup, where we aspire to make a connected community of students. Be it an open university or a regular college, it's an open space for students to share ideas and dream big.
-Come onboard with us and begin your learning journey!
-            </p>
-            <ul>
-              <li>   </li>
-              <li>   </li>
-            </ul>
-            <div class="row icon-boxes">
-              <div class="col-md-6">
-                <i class="bx bx-target-lock"></i>
-                <h4>Our Mission</h4>
-                <p>🚀 We are here to create learner’s community.</p>
-                <p>🚀 Encourage interaction among students and faculty.</p>
-                
-                
-
-              </div>
-              
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-
-
-    <!-- ======= Counts Section ======= -->
-    
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Welcome to the homepage of OpenUni.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="icon-box">
-              <i class="bi bi-briefcase"></i>
-              <h4><a href="assignments">🚀 Assignments</a></h4>
-              
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <i class="bi bi-card-checklist"></i>
-              <h4><a href="questionpaper">🚀 Question Paper</a></h4>
-              
-            </div>
-          </div>
-          <div class="col-md-6 mt-4">
-            <div class="icon-box">
-              <i class="bi bi-bar-chart"></i>
-              <h4><a href="examnotes">🚀 Exam Notes</a></h4>
-              
-              
-            </div>
-          </div>
-          <div class="col-md-6 mt-4">
-            <div class="icon-box">
-              <i class="bi bi-binoculars"></i>
-              <h4><a href="worpro">🚀 Workbooks</a></h4>
-             
-            </div>
-          </div>
-          <div class="col-md-6 mt-4">
-            <div class="icon-box">
-              <i class="bi bi-brightness-high"></i>
-              <h4><a href="events">🚀 Events</a></h4>
-              
-            </div>
-          </div>
-          
-          
-          
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">      
-          <h2>Courses</h2>
-          
-          <form action="">
-            
-            <input type="text" name="" id="course_name" placeholder="Course">
-            <input type="number" name="" id="course_name" placeholder="Current Year">
-            <button class="btn1">Fetch</button>
-          </form>
-          
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Bachelor's courses</li>
-              <li data-filter=".filter-card">Master's courses</li>
-              <li data-filter=".filter-web">Certificate</li>
-              <li data-filter=".filter-web">Degree Program</li>
-              <li data-filter=".filter-web">PG Program</li>
-              <li data-filter=".filter-web">Diploma</li>
-
-            </ul>
-          </div>
-        </div> 
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-
-   
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Feel free to connect with us.</p>
-        </div>
-
-        <div class="row mt-5 justify-content-center">
-
-          <div class="col-lg-10">
-
-            <div class="info-wrap">
-              <div class="row">
-                <div class="col-lg-4 info">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>Delhi<br>New Delhi, India 1100XX</p>
+                <div class="section-title">
+                    <h2>What We Do</h2>
+                    <p>"Our team works rigorously to provide you with the best quality content. We care about the aspirations of our students and would guide you on your journey. "
+                    </p>
                 </div>
 
-                <div class="col-lg-4 info mt-4 mt-lg-0">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>ask@openuni.in<br>contact@openUni.in</p>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            <h4><a href="assignments">Assignment</a></h4>
+                            <p>Who measures intelligence with assignments? Our education system is still stuck with this rudimentary parameter. Therefore we provide you assignment so that you can focus on learning new things with us.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4><a href="worpro">Workbook/project</a></h4>
+                            <p>Got no idea on how to begin your research projects? What are we here for, at OpenUni you'd find all the guidance you seek. All you need is to be enthusiastic and cooperative with our team.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                        <div class="icon-box">
+                            <div class="icon"><i class="bx bx-tachometer"></i></div>
+                            <h4><a href="exams">Exam</a></h4>
+                            <p>Last minute exam preparation isn't an easy task and we understand that. We provide you with Previous Year Question Paper analysis based on their marks weightage and frequency. However time you have to spare, it should be with
+                                OpenUni.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="col-lg-4 info mt-4 mt-lg-0">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+91<br>+91</p>
+            </div>
+        </section>
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="{{about_img}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <h3>About Us</h3>
+                        <p>
+                            OpenUni is a youth startup, where we aspire to make a connected community of students. Be it an open university or a regular college, it's an open space for students to share ideas and dream big. Come onboard with us and begin your learning journey!
+                        </p>
+                        <ul>
+                            <li> </li>
+                            <li> </li>
+                        </ul>
+                        <div class="row icon-boxes">
+                            <div class="col-md-6">
+                                <i class="bx bx-target-lock"></i>
+                                <h4>Our Mission</h4>
+                                <p>🚀 We are here to create learner’s community.</p>
+                                <p>🚀 Encourage interaction among students and faculty.</p>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+            </div>
+        </section>
+        <!-- End About Section -->
+
+
+
+        <!-- ======= Counts Section ======= -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Services</h2>
+                    <p>Welcome to the homepage of OpenUni.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="icon-box">
+                            <i class="bi bi-briefcase"></i>
+                            <h4><a href="assignments">🚀 Assignments</a></h4>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4 mt-lg-0">
+                        <div class="icon-box">
+                            <i class="bi bi-card-checklist"></i>
+                            <h4><a href="questionpaper">🚀 Question Paper</a></h4>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-bar-chart"></i>
+                            <h4><a href="examnotes">🚀 Exam Notes</a></h4>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-binoculars"></i>
+                            <h4><a href="worpro">🚀 Workbooks</a></h4>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="icon-box">
+                            <i class="bi bi-brightness-high"></i>
+                            <h4><a href="events">🚀 Events</a></h4>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Services Section -->
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Courses</h2>
+
+                    <form action="">
+
+                        <input type="text" name="" id="course_name" placeholder="Course">
+                        <input type="number" name="" id="course_name" placeholder="Current Year">
+                        <button class="btn1">Fetch</button>
+                    </form>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul id="portfolio-flters">
+                            <a href="/courses">
+                                <li data-filter="*" class="filter-active">All</li>
+                            </a>
+                            <a href="/courses?course_category=BACHELORS">
+                                <li data-filter=".filter-app">Bachelor's courses</li>
+                            </a>
+                            <a href="/courses?course_category=MASTERS">
+                                <li data-filter=".filter-card">Master's courses</li>
+                            </a>
+                            <a href="/courses?course_category=CERTIFICATE">
+                                <li data-filter=".filter-web">Certificate</li>
+                            </a>
+                            <a href="/courses?course_category=DEGREE">
+                                <li data-filter=".filter-web">Degree Program</li>
+                            </a>
+                            <a href="/courses?course_category=PG">
+                                <li data-filter=".filter-web">PG Program</li>
+                            </a>
+                            <a href="/courses?course_category=DIPLOMA">
+                                <li data-filter=".filter-web">Diploma</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    {% for course in data %}
+                    <div class="card-category-3 col-lg-3 col-12 d-flex justify-content-center">
+
+                        <div class="basic-card basic-card-aqua">
+                            <div class="card-content">
+                                <div class="my-3">
+                                    <img height="100px" src="{{course.thumbnail}}" alt="">
+                                </div>
+                                <span class="card-title">{{course.coursename}}</span>
+                                <p class="card-text">
+                                    Category : {{course.course_category}} <br> Type : {{course.file_type}}
+                                </p>
+
+                                ₹ {{course.price}}
+                            </div>
+
+                            <div class="card-link row m-0">
+                                <div class="col-lg-6 col-12" style="    border-right: 1px solid #82c1bb;">
+                                    <a target="_blank" href="/demo/{{course.course_id}}" title="Demo"><span>Demo</span></a>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <a href="/buy/{{course.course_id}}" title="Buy Now"><span>Buy Now</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
             </div>
 
-          </div>
+            </div>
 
-        </div>
+            </div>
+        </section>
+        <!-- End Portfolio Section -->
 
-        <div class="row mt-5 justify-content-center">
-          <div class="col-lg-10">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>OpenUni</h3>
-            <p>
-              XYZ <br>
-              New Delhi, 1100XX<br>
-              India <br><br>
-              <strong>Phone:</strong> 1234567890<br>
-              <strong>Email:</strong> contact@openUni.in<br>
-            </p>
-          </div>
-          
-          
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="assignments">Solved Assignments</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="questionpaper">Question Papers</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="examnotes">Exam Notes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="worpro">Workbooks</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="events">Events</a></li>
-            </ul>
-            
-          </div>
+    </main>
+    <!-- End #main -->
+    {%include 'footer.html'%}
 
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="faqs">FAQs</a></li>
-              
-              
-              <li><i class="bx bx-chevron-right"></i> <a href="tnc">Terms and Conditions</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="privacy-policy">Privacy policy</a></li>
-            </ul>
-          </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>For latest updates, stay tuned with us.</p>
-            <form action="" method="post">
-              <input type="email" name="email" placeholder="Enter your Email address"><input type="submit" value="Subscribe">
-            </form>
-          </div>
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
 
-        </div>
-      </div>
-    </div>
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
 
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>OpenUni</span></strong>. All Rights Reserved
-        </div>
-       
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://mobile.twitter.com/OpenUni11" class="twitter"><i class="bx bxl-twitter"></i></a>
-        
-        <a href="https://www.instagram.com/openuni.in/?hl=en" class="instagram"><i class="bx bxl-instagram"></i></a>
-        
-        
-        <a href="https://t.me/+VvMMR2I2MjI3NTBl" class="gmail"><i class="bx bxl-telegram"></i></a>
-        
-        <a href="https://chat.whatsapp.com/CFWuSZQ2w3i6DGiRyVZTU4" class="wahtsapp"><i class="bx bxl-whatsapp"></i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
-  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
-
-  <!-- Main JS File -->
-  <script src="{% static 'assets/js/main.js' %}"></script>
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+        setInterval(function() {
+            plusSlides(1);
+        }, 8000);
+    </script>
 
 </html>
